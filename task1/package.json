@@ -7,7 +7,7 @@
     "@wdio/spec-reporter": "^9.14.0"
   },
   "scripts": {
-    "test": "wdio run config/wdio.conf.js --"
+    "test": "wdio run src/config/wdio.conf.js"
   },
   "type": "module",
   "dependencies": {
