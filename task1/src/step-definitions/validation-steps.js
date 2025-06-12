@@ -21,25 +21,22 @@ Then("the error message should be {string}", async (expectedMessage) => {
         .and.to.be.oneOf([emailText, passwordText]);
 });
 
-// using default WDIO expect - no changes
 Then(/^the "(.*)" text should( not)? be visible$/, async (text, not) => {
-    if (not) {
-        await pages("home").shouldTextNotBeVisible(text);
-    } else {
-        await pages("home").shouldTextBeVisible(text);
-    }
+    await pages("home").assertTextVisibility(text, !not)
 });
 
-// using Chai assert
 Then("the {string} item should be {string} in the sorted items list", async (itemText, position) => {
-    let card;
-    if (position === "last") {
-        card = await pages("home").sortedResults.lastCard;
-    } else {
-        card = await pages("home").sortedResults.firstCard;
-    }
+    const sortedResults = pages("home").sortedResults;
 
-    const productName = await pages("home").sortedResults.productName(card)
+    const card = position === "last"
+        ? await sortedResults.lastCard
+        : await sortedResults.firstCard;
+
+    chaiAssert.isNotNull(card, `Expected a "${position}" card but got null`);
+
+    const productName = await sortedResults.productName(card);
+    chaiAssert.isNotNull(productName, "productName element not found");
+
     await productName.waitForDisplayed({timeout: 5000});
     const actualText = await productName.getText();
 

@@ -32,7 +32,10 @@ When(/^I sort items by "([^"]*)"$/, async (sortOption) => {
         el.selectedIndex = idx;
         el.dispatchEvent(new Event('change', {bubbles: true}));
     }, select, index);
+
+    await browser.pause(1000)
 });
+
 When("I change the language to {string}", async (language) => {
     await pages("home").header.clickLangSelect();
 
