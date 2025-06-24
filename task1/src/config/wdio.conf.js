@@ -69,15 +69,15 @@ export const config = {
                 ]
             }
         },
-        {
-            browserName: 'msedge',
-            'ms:edgeOptions': {
-                args: [
-                    '--window-size=1920,1080',
-                    '--headless'
-                ]
-            }
-        }
+        // {
+        //     browserName: 'MicrosoftEdge',
+        //     'ms:edgeOptions': {
+        //         args: [
+        //             '--window-size=1920,1080',
+        //             '--headless'
+        //         ]
+        //     }
+        // }
     ],
 
     baseUrl: "https://practicesoftwaretesting.com",
@@ -358,4 +358,4 @@ export const config = {
      */
     // afterAssertion: function(params) {
     // }
-}
+};
