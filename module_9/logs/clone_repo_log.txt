@@ -1,0 +1,18 @@
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Repo clone, UI and API tests/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Ren0xx/epam_automated_testing.git # timeout=10
+Fetching upstream changes from https://github.com/Ren0xx/epam_automated_testing.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Ren0xx/epam_automated_testing.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision b5a79cf2780238601377e2decaa4d3b5c5ef1bb7 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b5a79cf2780238601377e2decaa4d3b5c5ef1bb7 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D main # timeout=10
+ > git checkout -b main b5a79cf2780238601377e2decaa4d3b5c5ef1bb7 # timeout=10
+Commit message: "Removing msedge from the tests"
+ > git rev-list --no-walk 75b5f9525669152ab4ff91fbded122f6d8493bb7 # timeout=10

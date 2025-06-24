@@ -1,0 +1,37 @@
+pipeline {
+  agent any
+  tools {
+    nodejs 'node 24' //using jenkins nodejs plugin (node v. 24)
+  }
+  stages {
+    stage('Clone repo') {
+      steps {
+        git branch: 'main', url: 'https://github.com/Ren0xx/epam_automated_testing.git'      }
+    }
+    stage('UI Tests') {
+      steps {
+        dir('task1') {
+          sh '''
+            node -v
+            npm ci
+            npm run test
+          '''
+        }
+      }
+    }
+    stage('API Tests') {
+      steps {
+        dir('task_5') {
+          sh '''
+            node -v
+            npm ci
+            npm run test
+          '''
+        }
+      }
+    }
+  }
+  triggers {
+    cron('H */2 * * *') //using cron job running every 2 hours
+  }
+}

@@ -1,0 +1,200 @@
++ node -v
+v24.2.0
++ npm ci
+npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+
+added 555 packages, and audited 556 packages in 5s
+
+108 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (1 low, 4 high)
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
++ npm run test
+
+> test
+> wdio run src/config/wdio.conf.js
+
+
+Execution of 8 workers started at 2025-06-24T17:51:51.603Z
+
+[1-0] RUNNING in firefox - file:///var/lib/jenkins/workspace/Repo%20clone,%20UI%20and%20API%20tests/task1/src/features/language.feature
+[0-0] RUNNING in chrome - file:///var/lib/jenkins/workspace/Repo%20clone,%20UI%20and%20API%20tests/task1/src/features/language.feature
+[0-0] PASSED in chrome - file:///var/lib/jenkins/workspace/Repo%20clone,%20UI%20and%20API%20tests/task1/src/features/language.feature
+[0-1] RUNNING in chrome - file:///var/lib/jenkins/workspace/Repo%20clone,%20UI%20and%20API%20tests/task1/src/features/login.feature
+[1-0] PASSED in firefox - file:///var/lib/jenkins/workspace/Repo%20clone,%20UI%20and%20API%20tests/task1/src/features/language.feature
+[1-1] RUNNING in firefox - file:///var/lib/jenkins/workspace/Repo%20clone,%20UI%20and%20API%20tests/task1/src/features/login.feature
+[0-1] PASSED in chrome - file:///var/lib/jenkins/workspace/Repo%20clone,%20UI%20and%20API%20tests/task1/src/features/login.feature
+[0-2] RUNNING in chrome - file:///var/lib/jenkins/workspace/Repo%20clone,%20UI%20and%20API%20tests/task1/src/features/search.feature
+[1-1] PASSED in firefox - file:///var/lib/jenkins/workspace/Repo%20clone,%20UI%20and%20API%20tests/task1/src/features/login.feature
+[1-2] RUNNING in firefox - file:///var/lib/jenkins/workspace/Repo%20clone,%20UI%20and%20API%20tests/task1/src/features/search.feature
+[0-2] (node:47426) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 result listeners added to [EventEmitter]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+[0-2] (Use `node --trace-warnings ...` to show where the warning was created)
+[1-2] PASSED in firefox - file:///var/lib/jenkins/workspace/Repo%20clone,%20UI%20and%20API%20tests/task1/src/features/search.feature
+[1-3] RUNNING in firefox - file:///var/lib/jenkins/workspace/Repo%20clone,%20UI%20and%20API%20tests/task1/src/features/sorting.feature
+[1-3] PASSED in firefox - file:///var/lib/jenkins/workspace/Repo%20clone,%20UI%20and%20API%20tests/task1/src/features/sorting.feature
+[0-3] RUNNING in chrome - file:///var/lib/jenkins/workspace/Repo%20clone,%20UI%20and%20API%20tests/task1/src/features/sorting.feature
+[0-3] PASSED in chrome - file:///var/lib/jenkins/workspace/Repo%20clone,%20UI%20and%20API%20tests/task1/src/features/sorting.feature
+[0-2] PASSED in chrome - file:///var/lib/jenkins/workspace/Repo%20clone,%20UI%20and%20API%20tests/task1/src/features/search.feature
+
+ "spec" Reporter:
+------------------------------------------------------------------
+[chrome 137.0.7151.119 linux #0-0] Running: chrome (v137.0.7151.119) on linux
+[chrome 137.0.7151.119 linux #0-0] Session ID: 9c1ec9442673bad2dddbdcb3fe92d25a
+[chrome 137.0.7151.119 linux #0-0]
+[chrome 137.0.7151.119 linux #0-0] » src/features/language.feature
+[chrome 137.0.7151.119 linux #0-0] Language change
+[chrome 137.0.7151.119 linux #0-0] Language change to "ES" should change sort header to spanish
+[chrome 137.0.7151.119 linux #0-0]    ✓ Given I am on the "home" page
+[chrome 137.0.7151.119 linux #0-0]    ✓ When I change the language to "ES"
+[chrome 137.0.7151.119 linux #0-0]    ✓ Then the "Ordenar" text should be visible
+[chrome 137.0.7151.119 linux #0-0]    ✓ And the "Sort" text should not be visible
+[chrome 137.0.7151.119 linux #0-0]
+[chrome 137.0.7151.119 linux #0-0] 4 passing (6s)
+------------------------------------------------------------------
+[firefox 139.0.4 linux #1-0] Running: firefox (v139.0.4) on linux
+[firefox 139.0.4 linux #1-0] Session ID: 94e07e16-cdec-433e-9c26-8d82c3a9bafa
+[firefox 139.0.4 linux #1-0]
+[firefox 139.0.4 linux #1-0] » src/features/language.feature
+[firefox 139.0.4 linux #1-0] Language change
+[firefox 139.0.4 linux #1-0] Language change to "ES" should change sort header to spanish
+[firefox 139.0.4 linux #1-0]    ✓ Given I am on the "home" page
+[firefox 139.0.4 linux #1-0]    ✓ When I change the language to "ES"
+[firefox 139.0.4 linux #1-0]    ✓ Then the "Ordenar" text should be visible
+[firefox 139.0.4 linux #1-0]    ✓ And the "Sort" text should not be visible
+[firefox 139.0.4 linux #1-0]
+[firefox 139.0.4 linux #1-0] 4 passing (6.9s)
+------------------------------------------------------------------
+[chrome 137.0.7151.119 linux #0-1] Running: chrome (v137.0.7151.119) on linux
+[chrome 137.0.7151.119 linux #0-1] Session ID: ef55572d55de0a15a817e8b5b1d96f99
+[chrome 137.0.7151.119 linux #0-1]
+[chrome 137.0.7151.119 linux #0-1] » src/features/login.feature
+[chrome 137.0.7151.119 linux #0-1] Login
+[chrome 137.0.7151.119 linux #0-1] Login page should show "email address is required" error when email input is missing
+[chrome 137.0.7151.119 linux #0-1]    ✓ Given I am on the "login" page
+[chrome 137.0.7151.119 linux #0-1]    ✓ When I enter "password" as password
+[chrome 137.0.7151.119 linux #0-1]    ✓ And I click the login button
+[chrome 137.0.7151.119 linux #0-1]    ✓ Then the error message should be "Email is required"
+[chrome 137.0.7151.119 linux #0-1]
+[chrome 137.0.7151.119 linux #0-1] Login page should show "password is required" error when password input is missing
+[chrome 137.0.7151.119 linux #0-1]    ✓ Given I am on the "login" page
+[chrome 137.0.7151.119 linux #0-1]    ✓ When I enter "email" as email
+[chrome 137.0.7151.119 linux #0-1]    ✓ And I click the login button
+[chrome 137.0.7151.119 linux #0-1]    ✓ Then the error message should be "Password is required"
+[chrome 137.0.7151.119 linux #0-1]
+[chrome 137.0.7151.119 linux #0-1] 8 passing (1.3s)
+------------------------------------------------------------------
+[firefox 139.0.4 linux #1-1] Running: firefox (v139.0.4) on linux
+[firefox 139.0.4 linux #1-1] Session ID: 1b35c011-2940-4989-a898-c1dcbce29957
+[firefox 139.0.4 linux #1-1]
+[firefox 139.0.4 linux #1-1] » src/features/login.feature
+[firefox 139.0.4 linux #1-1] Login
+[firefox 139.0.4 linux #1-1] Login page should show "email address is required" error when email input is missing
+[firefox 139.0.4 linux #1-1]    ✓ Given I am on the "login" page
+[firefox 139.0.4 linux #1-1]    ✓ When I enter "password" as password
+[firefox 139.0.4 linux #1-1]    ✓ And I click the login button
+[firefox 139.0.4 linux #1-1]    ✓ Then the error message should be "Email is required"
+[firefox 139.0.4 linux #1-1]
+[firefox 139.0.4 linux #1-1] Login page should show "password is required" error when password input is missing
+[firefox 139.0.4 linux #1-1]    ✓ Given I am on the "login" page
+[firefox 139.0.4 linux #1-1]    ✓ When I enter "email" as email
+[firefox 139.0.4 linux #1-1]    ✓ And I click the login button
+[firefox 139.0.4 linux #1-1]    ✓ Then the error message should be "Password is required"
+[firefox 139.0.4 linux #1-1]
+[firefox 139.0.4 linux #1-1] 8 passing (2.3s)
+------------------------------------------------------------------
+[firefox 139.0.4 linux #1-2] Running: firefox (v139.0.4) on linux
+[firefox 139.0.4 linux #1-2] Session ID: 0c40997a-b46f-4214-a26c-83fabbc883e9
+[firefox 139.0.4 linux #1-2]
+[firefox 139.0.4 linux #1-2] » src/features/search.feature
+[firefox 139.0.4 linux #1-2] Item search
+[firefox 139.0.4 linux #1-2] Search phrase header should be shown when search bar is used
+[firefox 139.0.4 linux #1-2]    ✓ Given I am on the "home" page
+[firefox 139.0.4 linux #1-2]    ✓ When I enter "Washers" as search phrase
+[firefox 139.0.4 linux #1-2]    ✓ And I click the search button
+[firefox 139.0.4 linux #1-2]    ✓ Then the "Searched for: Washers" text should be visible
+[firefox 139.0.4 linux #1-2]
+[firefox 139.0.4 linux #1-2] Search input should be cleared when search button is clicked
+[firefox 139.0.4 linux #1-2]    ✓ Given I am on the "home" page
+[firefox 139.0.4 linux #1-2]    ✓ When I enter "search" as search phrase
+[firefox 139.0.4 linux #1-2]    ✓ And I click the search button
+[firefox 139.0.4 linux #1-2]    ✓ Then the search input should be empty
+[firefox 139.0.4 linux #1-2]
+[firefox 139.0.4 linux #1-2] Search input should be cleared when search clear button is clicked
+[firefox 139.0.4 linux #1-2]    ✓ Given I am on the "home" page
+[firefox 139.0.4 linux #1-2]    ✓ When I enter "search" as search phrase
+[firefox 139.0.4 linux #1-2]    ✓ And I click the search input clear button
+[firefox 139.0.4 linux #1-2]    ✓ Then the search input should be empty
+[firefox 139.0.4 linux #1-2]
+[firefox 139.0.4 linux #1-2] 12 passing (4.6s)
+------------------------------------------------------------------
+[firefox 139.0.4 linux #1-3] Running: firefox (v139.0.4) on linux
+[firefox 139.0.4 linux #1-3] Session ID: c82755a1-6d86-4ce7-93b0-394ea4f65719
+[firefox 139.0.4 linux #1-3]
+[firefox 139.0.4 linux #1-3] » src/features/sorting.feature
+[firefox 139.0.4 linux #1-3] Sorting items
+[firefox 139.0.4 linux #1-3] Specific item should be first in the list when sorting method is "Name (A-Z)"
+[firefox 139.0.4 linux #1-3]    ✓ Given I am on the "home" page
+[firefox 139.0.4 linux #1-3]    ✓ When I sort items by "Name (A-Z)"
+[firefox 139.0.4 linux #1-3]    ✓ Then the "Adjustable Wrench" text should be visible
+[firefox 139.0.4 linux #1-3]    ✓ And the "Adjustable Wrench" item should be "first" in the sorted items list
+[firefox 139.0.4 linux #1-3]
+[firefox 139.0.4 linux #1-3] Specific item should be first in the list when sorting method is "Name (Z-A)"
+[firefox 139.0.4 linux #1-3]    ✓ Given I am on the "home" page
+[firefox 139.0.4 linux #1-3]    ✓ When I sort items by "Name (Z-A)"
+[firefox 139.0.4 linux #1-3]    ✓ Then the "Wood Saw" text should be visible
+[firefox 139.0.4 linux #1-3]    ✓ And the "Wood Saw" item should be "first" in the sorted items list
+[firefox 139.0.4 linux #1-3]
+[firefox 139.0.4 linux #1-3] 8 passing (9s)
+------------------------------------------------------------------
+[chrome 137.0.7151.119 linux #0-3] Running: chrome (v137.0.7151.119) on linux
+[chrome 137.0.7151.119 linux #0-3] Session ID: 3e5fe57113bea3afb562f260cb9ce140
+[chrome 137.0.7151.119 linux #0-3]
+[chrome 137.0.7151.119 linux #0-3] » src/features/sorting.feature
+[chrome 137.0.7151.119 linux #0-3] Sorting items
+[chrome 137.0.7151.119 linux #0-3] Specific item should be first in the list when sorting method is "Name (A-Z)"
+[chrome 137.0.7151.119 linux #0-3]    ✓ Given I am on the "home" page
+[chrome 137.0.7151.119 linux #0-3]    ✓ When I sort items by "Name (A-Z)"
+[chrome 137.0.7151.119 linux #0-3]    ✓ Then the "Adjustable Wrench" text should be visible
+[chrome 137.0.7151.119 linux #0-3]    ✓ And the "Adjustable Wrench" item should be "first" in the sorted items list
+[chrome 137.0.7151.119 linux #0-3]
+[chrome 137.0.7151.119 linux #0-3] Specific item should be first in the list when sorting method is "Name (Z-A)"
+[chrome 137.0.7151.119 linux #0-3]    ✓ Given I am on the "home" page
+[chrome 137.0.7151.119 linux #0-3]    ✓ When I sort items by "Name (Z-A)"
+[chrome 137.0.7151.119 linux #0-3]    ✓ Then the "Wood Saw" text should be visible
+[chrome 137.0.7151.119 linux #0-3]    ✓ And the "Wood Saw" item should be "first" in the sorted items list
+[chrome 137.0.7151.119 linux #0-3]
+[chrome 137.0.7151.119 linux #0-3] 8 passing (1m 11.2s)
+------------------------------------------------------------------
+[chrome 137.0.7151.119 linux #0-2] Running: chrome (v137.0.7151.119) on linux
+[chrome 137.0.7151.119 linux #0-2] Session ID: e829650306020f845a3246cd5ca08599
+[chrome 137.0.7151.119 linux #0-2]
+[chrome 137.0.7151.119 linux #0-2] » src/features/search.feature
+[chrome 137.0.7151.119 linux #0-2] Item search
+[chrome 137.0.7151.119 linux #0-2] Search phrase header should be shown when search bar is used
+[chrome 137.0.7151.119 linux #0-2]    ✓ Given I am on the "home" page
+[chrome 137.0.7151.119 linux #0-2]    ✓ When I enter "Washers" as search phrase
+[chrome 137.0.7151.119 linux #0-2]    ✓ And I click the search button
+[chrome 137.0.7151.119 linux #0-2]    ✓ Then the "Searched for: Washers" text should be visible
+[chrome 137.0.7151.119 linux #0-2]
+[chrome 137.0.7151.119 linux #0-2] Search input should be cleared when search button is clicked
+[chrome 137.0.7151.119 linux #0-2]    ✓ Given I am on the "home" page
+[chrome 137.0.7151.119 linux #0-2]    ✓ When I enter "search" as search phrase
+[chrome 137.0.7151.119 linux #0-2]    ✓ And I click the search button
+[chrome 137.0.7151.119 linux #0-2]    ✓ Then the search input should be empty
+[chrome 137.0.7151.119 linux #0-2]
+[chrome 137.0.7151.119 linux #0-2] Search input should be cleared when search clear button is clicked
+[chrome 137.0.7151.119 linux #0-2]    ✓ Given I am on the "home" page
+[chrome 137.0.7151.119 linux #0-2]    ✓ When I enter "search" as search phrase
+[chrome 137.0.7151.119 linux #0-2]    ✓ And I click the search input clear button
+[chrome 137.0.7151.119 linux #0-2]    ✓ Then the search input should be empty
+[chrome 137.0.7151.119 linux #0-2]
+[chrome 137.0.7151.119 linux #0-2] 12 passing (1m 36.1s)
+
+
+Spec Files:	 8 passed, 8 total (100% completed) in 00:01:49  
+
