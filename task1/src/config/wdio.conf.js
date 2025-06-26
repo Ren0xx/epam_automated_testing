@@ -1,3 +1,6 @@
+import { ReportAggregator } from "wdio-html-nice-reporter";
+let reportAggregator;
+
 export const config = {
     //
     // ====================
@@ -151,7 +154,26 @@ export const config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: [
+        [
+            "spec",
+            {
+                addConsoleLogs: true,
+            },
+        ],
+        [
+            "html-nice",
+            {
+                outputDir: "./reports/html-reports/",
+                filename: "report.html",
+                reportTitle: "Test Report",
+                linkScreenshots: true,
+                showInBrowser: true,
+                collapseTests: false,
+                useOnAfterCommandForScreenshot: true,
+            },
+        ],
+    ],
 
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
@@ -195,6 +217,20 @@ export const config = {
      * @param {object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
+    onPrepare: function (config, capabilities) {
+        reportAggregator = new ReportAggregator({
+            outputDir: "./reports/html-reports/",
+            filename: "master-report.html",
+            reportTitle: "Web Test Report",
+            browserName: "Unspecified",
+            showInBrowser: true,
+        });
+
+        reportAggregator.clean();
+    },
+    onComplete: async function () {
+        await reportAggregator.createReport();
+    },
     // onPrepare: function (config, capabilities) {
     // },
     /**
