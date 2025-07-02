@@ -1,3 +1,3 @@
-import {pages} from "./pages/index.js";
+import { pages } from './pages/index.js';
 
-export {pages};
+export { pages };
