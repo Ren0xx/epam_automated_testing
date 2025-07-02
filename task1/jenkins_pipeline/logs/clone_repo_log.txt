@@ -1,0 +1,39 @@
+The recommended git tool is: NONE
+
+No credentials specified
+
+Cloning the remote Git repository
+
+Cloning repository https://github.com/Ren0xx/epam_automated_testing.git
+
+ > git init /var/lib/jenkins/workspace/Repo clone, formating and liniting, UI and API tests@2 # timeout=10
+
+Fetching upstream changes from https://github.com/Ren0xx/epam_automated_testing.git
+
+ > git --version # timeout=10
+
+ > git --version # 'git version 2.34.1'
+
+ > git fetch --tags --force --progress -- https://github.com/Ren0xx/epam_automated_testing.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+
+ > git config remote.origin.url https://github.com/Ren0xx/epam_automated_testing.git # timeout=10
+
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+
+Avoid second fetch
+
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+
+Checking out Revision b86ac97258bd94a4021de0936a008c2d21ce394b (refs/remotes/origin/main)
+
+ > git config core.sparsecheckout # timeout=10
+
+ > git checkout -f b86ac97258bd94a4021de0936a008c2d21ce394b # timeout=10
+
+ > git branch -a -v --no-abbrev # timeout=10
+
+ > git checkout -b main b86ac97258bd94a4021de0936a008c2d21ce394b # timeout=10
+
+Commit message: "Integrating eslint and prettier"
+
+ > git rev-list --no-walk acf00278bcd8ae0e90c8fdfe41d303eba9069e4a # timeout=10

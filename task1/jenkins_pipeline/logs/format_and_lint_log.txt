@@ -1,0 +1,142 @@
++ npm ci
+
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+
+npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+
+
+
+added 681 packages, and audited 682 packages in 4s
+
+
+
+137 packages are looking for funding
+
+  run `npm fund` for details
+
+
+
+5 vulnerabilities (1 low, 4 high)
+
+
+
+To address all issues, run:
+
+  npm audit fix
+
+
+
+Run `npm audit` for details.
+
++ npm run lint:fix
+
+
+
+> lint:fix
+
+> eslint . --fix
+
+
+
++ npm run format:fix
+
+
+
+> format:fix
+
+> prettier --write .
+
+
+
+.prettierrc 35ms (unchanged)
+
+eslint.config.js 11ms
+
+jenkins_pipeline/README.md 22ms (unchanged)
+
+package-lock.json 62ms (unchanged)
+
+package.json 2ms (unchanged)
+
+src/config/wdio.conf.js 19ms (unchanged)
+
+src/po/components/common/base.component.js 3ms (unchanged)
+
+src/po/components/common/header.component.js 6ms (unchanged)
+
+src/po/components/homepage/cardList.component.js 3ms (unchanged)
+
+src/po/components/homepage/filters.component.js 3ms (unchanged)
+
+src/po/components/index.js 2ms (unchanged)
+
+src/po/components/login/loginForm.component.js 2ms (unchanged)
+
+src/po/index.js 1ms (unchanged)
+
+src/po/pages/base.page.js 5ms (unchanged)
+
+src/po/pages/home.page.js 2ms (unchanged)
+
+src/po/pages/index.js 1ms (unchanged)
+
+src/po/pages/login.page.js 1ms (unchanged)
+
+src/step-definitions/actions-steps.js 7ms (unchanged)
+
+src/step-definitions/validation-steps.js 6ms (unchanged)
+
+------------------------------------------------------------
++ npm ci
+
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+
+
+
+added 432 packages, and audited 433 packages in 1s
+
+
+
+80 packages are looking for funding
+
+  run `npm fund` for details
+
+
+
+found 0 vulnerabilities
+
++ npm run lint:fix
+
+
+
+> task_5@1.0.0 lint:fix
+
+> eslint . --fix
+
+
+
++ npm run format:fix
+
+
+
+> task_5@1.0.0 format:fix
+
+> prettier --write .
+
+
+
+.prettierrc 38ms (unchanged)
+
+eslint.config.js 11ms (unchanged)
+
+index.test.js 24ms (unchanged)
+
+package-lock.json 41ms (unchanged)
+
+package.json 1ms (unchanged)
+
+README.md 24ms (unchanged)

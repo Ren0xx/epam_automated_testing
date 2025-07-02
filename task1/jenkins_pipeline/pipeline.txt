@@ -1,0 +1,56 @@
+pipeline {
+  agent any
+  tools {
+    nodejs 'node 24' // Jenkins NodeJS plugin (v24)
+  }
+  stages {
+    stage('Clone repo') {
+      steps {
+        git branch: 'main', url: 'https://github.com/Ren0xx/epam_automated_testing.git'
+      }
+    }
+    stage('Format and lint') {
+      steps {
+        dir('task1') {
+          sh '''
+            npm ci
+            npm run lint:fix
+            npm run format:fix
+          '''
+        }
+        dir('task_5') {
+          sh '''
+            npm ci
+            npm run lint:fix
+            npm run format:fix
+          '''
+        }
+      }
+    }
+    stage('UI Tests') {
+      steps {
+        dir('task1') {
+          sh '''
+            node -v
+            npm ci
+            npm run test
+          '''
+        }
+      }
+    }
+    stage('API Tests') {
+      steps {
+        dir('task_5') {
+          sh '''
+            node -v
+            npm ci
+            npm run test
+          '''
+        }
+      }
+    }
+  }
+  triggers {
+    cron('H */2 * * *')
+  }
+}
